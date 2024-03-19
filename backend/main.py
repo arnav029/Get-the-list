@@ -1,5 +1,4 @@
-#  @bekbrace
-#  FARMSTACK Tutorial - Sunday 13.06.2021
+
 
 from fastapi import FastAPI, HTTPException
 
@@ -13,7 +12,6 @@ from database import (
     remove_todo,
 )
 
-# an HTTP-specific exception class  to generate exception information
 
 from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
@@ -22,8 +20,7 @@ origins = [
     "http://localhost:3000",
 ]
 
-# what is a middleware? 
-# software that acts as a bridge between an operating system or database and applications, especially on a network.
+
 
 app.add_middleware(
     CORSMiddleware,
